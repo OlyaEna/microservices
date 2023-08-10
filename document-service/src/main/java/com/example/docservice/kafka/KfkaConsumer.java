@@ -45,6 +45,7 @@ public class KfkaConsumer {
         Document document = record.value();
         acknowledgment.acknowledge();
         documentService.transferFromAvro(document);
+
         log.info("Avro message received for key : " + key + " value : " + document.toString());
     }
 
