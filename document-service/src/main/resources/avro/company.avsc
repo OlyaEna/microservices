@@ -1,0 +1,56 @@
+{
+  "namespace": "com.example.docservice.schema",
+  "type": "record",
+  "name": "Company",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "addressId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "occupation",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "personnel",
+      "type": "long",
+      "default": -1
+    },
+    {
+      "name": "formOwnership",
+      "type": {
+        "type": "enum",
+        "name": "FormOwnership",
+        "symbols": [
+          "INDIVIDUAL_ENTREPRENEUR",
+          "UNITARY_ENTERPRISE",
+          "LLC"
+        ]
+      }
+    },
+    {
+      "name": "financialAmount",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ]
+}
