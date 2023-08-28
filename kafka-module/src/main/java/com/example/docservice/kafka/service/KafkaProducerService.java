@@ -4,20 +4,12 @@ import com.example.docservice.schema.Address;
 import com.example.docservice.schema.Company;
 import com.example.docservice.schema.Document;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
 public class KafkaProducerService {
-    @Value("${avro.topic.name.address}")
-    String addressTopicName;
-
-    String companyTopicName = "company_topic4";
-
-    @Value("${avro.topic.name.document}")
-    String documentTopicName;
 
     private final KafkaTemplate<String, Address> addressKafkaTemplate;
     private final KafkaTemplate<String, Company> companyKafkaTemplate;

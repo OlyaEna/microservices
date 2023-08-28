@@ -14,10 +14,10 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Address extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -411154363590572694L;
+  private static final long serialVersionUID = 8080038993223828411L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Address\",\"namespace\":\"com.example.docservice.schema\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"documentId\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"country\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"city\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"streetName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"streetNumber\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"postCode\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Address\",\"namespace\":\"com.example.docservice.schema\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"country\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"city\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"streetName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"streetNumber\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"postCode\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -74,7 +74,6 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
   }
 
   private java.lang.CharSequence id;
-  private java.lang.CharSequence documentId;
   private java.lang.CharSequence country;
   private java.lang.CharSequence city;
   private java.lang.CharSequence streetName;
@@ -91,16 +90,14 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param documentId The new value for documentId
    * @param country The new value for country
    * @param city The new value for city
    * @param streetName The new value for streetName
    * @param streetNumber The new value for streetNumber
    * @param postCode The new value for postCode
    */
-  public Address(java.lang.CharSequence id, java.lang.CharSequence documentId, java.lang.CharSequence country, java.lang.CharSequence city, java.lang.CharSequence streetName, java.lang.CharSequence streetNumber, java.lang.CharSequence postCode) {
+  public Address(java.lang.CharSequence id, java.lang.CharSequence country, java.lang.CharSequence city, java.lang.CharSequence streetName, java.lang.CharSequence streetNumber, java.lang.CharSequence postCode) {
     this.id = id;
-    this.documentId = documentId;
     this.country = country;
     this.city = city;
     this.streetName = streetName;
@@ -114,12 +111,11 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return documentId;
-    case 2: return country;
-    case 3: return city;
-    case 4: return streetName;
-    case 5: return streetNumber;
-    case 6: return postCode;
+    case 1: return country;
+    case 2: return city;
+    case 3: return streetName;
+    case 4: return streetNumber;
+    case 5: return postCode;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -129,12 +125,11 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: documentId = (java.lang.CharSequence)value$; break;
-    case 2: country = (java.lang.CharSequence)value$; break;
-    case 3: city = (java.lang.CharSequence)value$; break;
-    case 4: streetName = (java.lang.CharSequence)value$; break;
-    case 5: streetNumber = (java.lang.CharSequence)value$; break;
-    case 6: postCode = (java.lang.CharSequence)value$; break;
+    case 1: country = (java.lang.CharSequence)value$; break;
+    case 2: city = (java.lang.CharSequence)value$; break;
+    case 3: streetName = (java.lang.CharSequence)value$; break;
+    case 4: streetNumber = (java.lang.CharSequence)value$; break;
+    case 5: postCode = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -154,23 +149,6 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'documentId' field.
-   * @return The value of the 'documentId' field.
-   */
-  public java.lang.CharSequence getDocumentId() {
-    return documentId;
-  }
-
-
-  /**
-   * Sets the value of the 'documentId' field.
-   * @param value the value to set.
-   */
-  public void setDocumentId(java.lang.CharSequence value) {
-    this.documentId = value;
   }
 
   /**
@@ -300,7 +278,6 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
     implements org.apache.avro.data.RecordBuilder<Address> {
 
     private java.lang.CharSequence id;
-    private java.lang.CharSequence documentId;
     private java.lang.CharSequence country;
     private java.lang.CharSequence city;
     private java.lang.CharSequence streetName;
@@ -322,29 +299,25 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.documentId)) {
-        this.documentId = data().deepCopy(fields()[1].schema(), other.documentId);
+      if (isValidValue(fields()[1], other.country)) {
+        this.country = data().deepCopy(fields()[1].schema(), other.country);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.country)) {
-        this.country = data().deepCopy(fields()[2].schema(), other.country);
+      if (isValidValue(fields()[2], other.city)) {
+        this.city = data().deepCopy(fields()[2].schema(), other.city);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.city)) {
-        this.city = data().deepCopy(fields()[3].schema(), other.city);
+      if (isValidValue(fields()[3], other.streetName)) {
+        this.streetName = data().deepCopy(fields()[3].schema(), other.streetName);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.streetName)) {
-        this.streetName = data().deepCopy(fields()[4].schema(), other.streetName);
+      if (isValidValue(fields()[4], other.streetNumber)) {
+        this.streetNumber = data().deepCopy(fields()[4].schema(), other.streetNumber);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.streetNumber)) {
-        this.streetNumber = data().deepCopy(fields()[5].schema(), other.streetNumber);
+      if (isValidValue(fields()[5], other.postCode)) {
+        this.postCode = data().deepCopy(fields()[5].schema(), other.postCode);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
-      }
-      if (isValidValue(fields()[6], other.postCode)) {
-        this.postCode = data().deepCopy(fields()[6].schema(), other.postCode);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
     }
 
@@ -358,29 +331,25 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.documentId)) {
-        this.documentId = data().deepCopy(fields()[1].schema(), other.documentId);
+      if (isValidValue(fields()[1], other.country)) {
+        this.country = data().deepCopy(fields()[1].schema(), other.country);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.country)) {
-        this.country = data().deepCopy(fields()[2].schema(), other.country);
+      if (isValidValue(fields()[2], other.city)) {
+        this.city = data().deepCopy(fields()[2].schema(), other.city);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.city)) {
-        this.city = data().deepCopy(fields()[3].schema(), other.city);
+      if (isValidValue(fields()[3], other.streetName)) {
+        this.streetName = data().deepCopy(fields()[3].schema(), other.streetName);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.streetName)) {
-        this.streetName = data().deepCopy(fields()[4].schema(), other.streetName);
+      if (isValidValue(fields()[4], other.streetNumber)) {
+        this.streetNumber = data().deepCopy(fields()[4].schema(), other.streetNumber);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.streetNumber)) {
-        this.streetNumber = data().deepCopy(fields()[5].schema(), other.streetNumber);
+      if (isValidValue(fields()[5], other.postCode)) {
+        this.postCode = data().deepCopy(fields()[5].schema(), other.postCode);
         fieldSetFlags()[5] = true;
-      }
-      if (isValidValue(fields()[6], other.postCode)) {
-        this.postCode = data().deepCopy(fields()[6].schema(), other.postCode);
-        fieldSetFlags()[6] = true;
       }
     }
 
@@ -425,46 +394,6 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
     }
 
     /**
-      * Gets the value of the 'documentId' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getDocumentId() {
-      return documentId;
-    }
-
-
-    /**
-      * Sets the value of the 'documentId' field.
-      * @param value The value of 'documentId'.
-      * @return This builder.
-      */
-    public com.example.docservice.schema.Address.Builder setDocumentId(java.lang.CharSequence value) {
-      validate(fields()[1], value);
-      this.documentId = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'documentId' field has been set.
-      * @return True if the 'documentId' field has been set, false otherwise.
-      */
-    public boolean hasDocumentId() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'documentId' field.
-      * @return This builder.
-      */
-    public com.example.docservice.schema.Address.Builder clearDocumentId() {
-      documentId = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'country' field.
       * @return The value.
       */
@@ -479,9 +408,9 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return This builder.
       */
     public com.example.docservice.schema.Address.Builder setCountry(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.country = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -490,7 +419,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return True if the 'country' field has been set, false otherwise.
       */
     public boolean hasCountry() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -500,7 +429,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       */
     public com.example.docservice.schema.Address.Builder clearCountry() {
       country = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -519,9 +448,9 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return This builder.
       */
     public com.example.docservice.schema.Address.Builder setCity(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[2], value);
       this.city = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -530,7 +459,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return True if the 'city' field has been set, false otherwise.
       */
     public boolean hasCity() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[2];
     }
 
 
@@ -540,7 +469,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       */
     public com.example.docservice.schema.Address.Builder clearCity() {
       city = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -559,9 +488,9 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return This builder.
       */
     public com.example.docservice.schema.Address.Builder setStreetName(java.lang.CharSequence value) {
-      validate(fields()[4], value);
+      validate(fields()[3], value);
       this.streetName = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -570,7 +499,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return True if the 'streetName' field has been set, false otherwise.
       */
     public boolean hasStreetName() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[3];
     }
 
 
@@ -580,7 +509,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       */
     public com.example.docservice.schema.Address.Builder clearStreetName() {
       streetName = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -599,9 +528,9 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return This builder.
       */
     public com.example.docservice.schema.Address.Builder setStreetNumber(java.lang.CharSequence value) {
-      validate(fields()[5], value);
+      validate(fields()[4], value);
       this.streetNumber = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -610,7 +539,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return True if the 'streetNumber' field has been set, false otherwise.
       */
     public boolean hasStreetNumber() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[4];
     }
 
 
@@ -620,7 +549,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       */
     public com.example.docservice.schema.Address.Builder clearStreetNumber() {
       streetNumber = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -639,9 +568,9 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return This builder.
       */
     public com.example.docservice.schema.Address.Builder setPostCode(java.lang.CharSequence value) {
-      validate(fields()[6], value);
+      validate(fields()[5], value);
       this.postCode = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -650,7 +579,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @return True if the 'postCode' field has been set, false otherwise.
       */
     public boolean hasPostCode() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[5];
     }
 
 
@@ -660,7 +589,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       */
     public com.example.docservice.schema.Address.Builder clearPostCode() {
       postCode = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -670,12 +599,11 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       try {
         Address record = new Address();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.documentId = fieldSetFlags()[1] ? this.documentId : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.country = fieldSetFlags()[2] ? this.country : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.city = fieldSetFlags()[3] ? this.city : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.streetName = fieldSetFlags()[4] ? this.streetName : (java.lang.CharSequence) defaultValue(fields()[4]);
-        record.streetNumber = fieldSetFlags()[5] ? this.streetNumber : (java.lang.CharSequence) defaultValue(fields()[5]);
-        record.postCode = fieldSetFlags()[6] ? this.postCode : (java.lang.CharSequence) defaultValue(fields()[6]);
+        record.country = fieldSetFlags()[1] ? this.country : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.city = fieldSetFlags()[2] ? this.city : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.streetName = fieldSetFlags()[3] ? this.streetName : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.streetNumber = fieldSetFlags()[4] ? this.streetNumber : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.postCode = fieldSetFlags()[5] ? this.postCode : (java.lang.CharSequence) defaultValue(fields()[5]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -714,14 +642,6 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
     } else {
       out.writeIndex(1);
       out.writeString(this.id);
-    }
-
-    if (this.documentId == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.documentId);
     }
 
     if (this.country == null) {
@@ -780,13 +700,6 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
 
       if (in.readIndex() != 1) {
         in.readNull();
-        this.documentId = null;
-      } else {
-        this.documentId = in.readString(this.documentId instanceof Utf8 ? (Utf8)this.documentId : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
         this.country = null;
       } else {
         this.country = in.readString(this.country instanceof Utf8 ? (Utf8)this.country : null);
@@ -821,7 +734,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       }
 
     } else {
-      for (int i = 0; i < 7; i++) {
+      for (int i = 0; i < 6; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           if (in.readIndex() != 1) {
@@ -835,22 +748,13 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
         case 1:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.documentId = null;
-          } else {
-            this.documentId = in.readString(this.documentId instanceof Utf8 ? (Utf8)this.documentId : null);
-          }
-          break;
-
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
             this.country = null;
           } else {
             this.country = in.readString(this.country instanceof Utf8 ? (Utf8)this.country : null);
           }
           break;
 
-        case 3:
+        case 2:
           if (in.readIndex() != 1) {
             in.readNull();
             this.city = null;
@@ -859,7 +763,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
           }
           break;
 
-        case 4:
+        case 3:
           if (in.readIndex() != 1) {
             in.readNull();
             this.streetName = null;
@@ -868,7 +772,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
           }
           break;
 
-        case 5:
+        case 4:
           if (in.readIndex() != 1) {
             in.readNull();
             this.streetNumber = null;
@@ -877,7 +781,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
           }
           break;
 
-        case 6:
+        case 5:
           if (in.readIndex() != 1) {
             in.readNull();
             this.postCode = null;

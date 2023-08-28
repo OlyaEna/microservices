@@ -12,14 +12,6 @@
       "default": null
     },
     {
-      "name": "documentId",
-      "type": [
-        "null",
-        "string"
-      ],
-      "default": null
-    },
-    {
       "name": "companyId",
       "type": [
         "null",
